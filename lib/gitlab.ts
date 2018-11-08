@@ -26,5 +26,5 @@ export const GitlabSupport: ExtensionPack = {
     },
     requiredConfigurationValues: [
         "sdm.gitlab.token",
-    ]
+    ],
 };
