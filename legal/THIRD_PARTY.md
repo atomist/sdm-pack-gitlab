@@ -1,8 +1,8 @@
-# `@atomist-seeds/sdm-pack`
+# `sdm-pack-gitlab`
 
-`@atomist-seeds/sdm-pack` is licensed under Apache License 2.0 - [http://www.apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0).
+`sdm-pack-gitlab` is licensed under Apache License 2.0 - [http://www.apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0).
 
-This page details all runtime OSS dependencies of `@atomist-seeds/sdm-pack`.
+This page details all runtime OSS dependencies of `sdm-pack-gitlab`.
 
 ## Licenses
 
