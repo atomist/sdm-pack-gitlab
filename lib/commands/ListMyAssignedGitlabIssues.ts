@@ -82,7 +82,7 @@ function gitlabIssueToAttachment(issue: GitlabIssue): Attachment {
                 value: issue.title,
             },
             {
-                title: "Description",
+                title: "IssueDescription",
                 value: issue.description,
             },
         ],

@@ -14,22 +14,30 @@
  * limitations under the License.
  */
 
-type State = "opened"|"closed";
-type Id = number;
-type Title = string;
-type Description = string;
-
+enum UserState {
+    active,
+    inactive,
+}
+type UserId = string;
+type UserName = string;
 interface GitlabUser {
-    readonly state: string;
-    readonly id: number;
-    readonly name: string;
+    readonly state: UserState;
+    readonly id: UserId;
+    readonly name: UserName;
 }
 
+enum IssueState {
+    opened,
+    closed,
+}
+type IssueId = number;
+type IssueTitle = string;
+type IssueDescription = string;
 export interface GitlabIssue {
-    readonly state: State;
-    readonly id: Id;
-    readonly title: Title;
-    readonly description?: Description;
+    readonly state: IssueState;
+    readonly id: IssueId;
+    readonly title: IssueTitle;
+    readonly description?: IssueDescription;
     readonly author: GitlabUser;
     readonly assignees?: GitlabUser[];
     readonly assignee?: GitlabUser;

@@ -16,5 +16,4 @@ declare module "gitlab" {
 
         public show(projectId: string, issueId: number): any;
     }
-
 }
