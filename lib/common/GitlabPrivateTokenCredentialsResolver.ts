@@ -22,15 +22,16 @@ import {
     RemoteRepoRef,
 } from "@atomist/automation-client";
 import { CredentialsResolver } from "@atomist/sdm";
+import { GITLAB_TOKEN_CONFIG_KEY } from "./constants";
 
 export class GitlabPrivateTokenCredentialsResolver implements CredentialsResolver {
     public commandHandlerCredentials(context: HandlerContext, id: RemoteRepoRef): ProjectOperationCredentials {
-        const creds: GitlabPrivateTokenCredentials = {privateToken: configurationValue("sdm.gitlab.token")};
+        const creds: GitlabPrivateTokenCredentials = {privateToken: configurationValue(GITLAB_TOKEN_CONFIG_KEY)};
         return creds;
     }
 
     public eventHandlerCredentials(context: HandlerContext, id: RemoteRepoRef): ProjectOperationCredentials {
-        const creds: GitlabPrivateTokenCredentials = {privateToken: configurationValue("sdm.gitlab.token")};
+        const creds: GitlabPrivateTokenCredentials = {privateToken: configurationValue(GITLAB_TOKEN_CONFIG_KEY)};
         return creds;
     }
 }

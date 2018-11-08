@@ -18,13 +18,16 @@ import {
     ExtensionPack,
     metadata,
 } from "@atomist/sdm";
+import { AddGitlabIssue } from "./commands/AddGitlabIssue";
+import { GITLAB_TOKEN_CONFIG_KEY } from "./common/constants";
 
 export const GitlabSupport: ExtensionPack = {
     ...metadata(),
     configure: sdm => {
+        sdm.addCommand(AddGitlabIssue);
         return sdm;
     },
     requiredConfigurationValues: [
-        "sdm.gitlab.token",
+        GITLAB_TOKEN_CONFIG_KEY,
     ],
 };

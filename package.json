@@ -21,7 +21,9 @@
   ],
   "main": "./index.js",
   "types": "./index.d.ts",
-  "dependencies": {},
+  "dependencies": {
+    "gitlab": "^4.2.1"
+  },
   "peerDependencies": {
     "@atomist/automation-client": "*",
     "@atomist/sdm": "*",
