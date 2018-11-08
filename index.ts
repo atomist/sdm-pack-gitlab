@@ -14,4 +14,5 @@
  * limitations under the License.
  */
 
-export { SeedSupport } from "./lib/seed";
+export { GitlabSupport } from "./lib/gitlab";
+export { GitlabPrivateTokenCredentialsResolver } from "./lib/common/GitlabPrivateTokenCredentialsResolver";

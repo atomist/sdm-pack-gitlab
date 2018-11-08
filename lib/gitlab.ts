@@ -19,9 +19,12 @@ import {
     metadata,
 } from "@atomist/sdm";
 
-export const SeedSupport: ExtensionPack = {
+export const GitlabSupport: ExtensionPack = {
     ...metadata(),
     configure: sdm => {
         return sdm;
     },
+    requiredConfigurationValues: [
+        "sdm.gitlab.token",
+    ]
 };
