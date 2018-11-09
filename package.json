@@ -1,9 +1,13 @@
 {
-  "name": "sdm-pack-gitlab",
-  "version": "0.1.0",
-  "description": "my new project",
-  "author": "lievendoclo",
-  "license": "Apache-2.0",
+  "name": "@atomist/sdm-pack-gitlab",
+  "version": "1.0.0",
+  "description": "Atomist extension pack for Gitlab",
+  "author": {
+    "name": "Atomist",
+    "email": "support@atomist.com",
+    "url": "https://atomist.com/"
+  },
+  "license": "SEE LICENSE IN LICENSE",
   "homepage": "https://github.com/atomist/sdm-pack-gitlab#readme",
   "repository": {
     "type": "git",
