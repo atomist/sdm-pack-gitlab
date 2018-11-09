@@ -74,7 +74,7 @@ class AddGitlabIssueParameters {
 }
 
 async function createGitlabIssue(parameters: AddGitlabIssueParameters): Promise<any> {
-    const token = configurationValue(GITLAB_TOKEN_CONFIG_KEY);
+    const token = configurationValue<string>(GITLAB_TOKEN_CONFIG_KEY);
     const api = new Issues({
         token,
         url: parameters.url,

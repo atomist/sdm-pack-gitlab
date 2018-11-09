@@ -93,7 +93,7 @@ function gitlabIssueToAttachment(issue: GitlabIssue): Attachment {
 async function listMyAssignedGitlabIssues(
     parameters: ListMyAssignedGitlabIssuesParameters,
     messageClient: MessageClient & SlackMessageClient): Promise<any> {
-    const token = configurationValue(GITLAB_TOKEN_CONFIG_KEY);
+    const token = configurationValue<string>(GITLAB_TOKEN_CONFIG_KEY);
     const api = new Issues({
         token,
         url: parameters.url,
