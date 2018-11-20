@@ -34,10 +34,10 @@
     "@atomist/sdm-core": "*"
   },
   "devDependencies": {
-    "@atomist/automation-client": "1.0.0-gitlab-support.20181108153403",
-    "@atomist/sdm": "1.0.0-RC.2",
-    "@atomist/sdm-core": "1.0.0-gitlab-support.20181106123340",
-    "@atomist/slack-messages": "^1.0.0",
+    "@atomist/automation-client": "1.1.0-master.20181119204931",
+    "@atomist/sdm": "1.0.1",
+    "@atomist/sdm-core": "1.1.0-master.20181120115720",
+    "@atomist/slack-messages": "1.0.1",
     "@types/mocha": "^5.2.5",
     "@types/power-assert": "^1.5.0",
     "espower-typescript": "^9.0.0",
