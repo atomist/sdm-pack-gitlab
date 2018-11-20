@@ -18,12 +18,14 @@ import {
     configurationValue,
     GitlabPrivateTokenCredentials,
     HandlerContext,
+    Parameters,
     ProjectOperationCredentials,
     RemoteRepoRef,
 } from "@atomist/automation-client";
 import { CredentialsResolver } from "@atomist/sdm";
 import { GITLAB_TOKEN_CONFIG_KEY } from "./constants";
 
+@Parameters()
 export class GitlabPrivateTokenCredentialsResolver implements CredentialsResolver {
     public commandHandlerCredentials(context: HandlerContext, id: RemoteRepoRef): ProjectOperationCredentials {
         const creds: GitlabPrivateTokenCredentials = {privateToken: configurationValue(GITLAB_TOKEN_CONFIG_KEY)};
