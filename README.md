@@ -2,47 +2,35 @@
   <img src="https://images.atomist.com/sdm/SDM-Logo-Dark.png">
 </p>
 
-# @atomist-seeds/sdm-pack-gitab
+# @atomist/sdm-pack-gitab
+
+[![atomist sdm goals](http://badge.atomist.com/T29E48P34/atomist/sdm-pack-gitlab/ab056b07-b484-40a2-b656-44b8c4e9b327)](https://app.atomist.com/workspace/T29E48P34)
+[![npm version](https://img.shields.io/npm/v/@atomist/sdm-pack-gitlab.svg)](https://www.npmjs.com/package/@atomist/sdm-pack-gitlab)
 
 An Atomist extension pack for Gitlab.
 
 [atomist-doc]: https://docs.atomist.com/ (Atomist Documentation)
 
-## Getting started
+## Purpose
 
-See the [Developer Quick Start][atomist-quick] to jump straight to
-creating an SDM.
+This pack adds Gitlab support to an Atomist SDM. This includes:
 
-[atomist-quick]: https://docs.atomist.com/quick-start/ (Atomist - Developer Quick Start)
+- a credentials resolver to use a private access token
 
-## Contributing
+## Usage
 
-Contributions to this project from community members are encouraged
-and appreciated. Please review the [Contributing
-Guidelines](CONTRIBUTING.md) for more information. Also see the
-[Development](#development) section in this document.
+Install the dependency in your SDM project.
 
-## Code of conduct
+```
+$ npm install @atomist/sdm-pack-gitlab
+```
 
-This project is governed by the [Code of
-Conduct](CODE_OF_CONDUCT.md). You are expected to act in accordance
-with this code by participating. Please report any unacceptable
-behavior to code-of-conduct@atomist.com.
+In order to use the credentials resolver, add the following code to your SDM definition:
 
-## Documentation
+```typescript
+sdm.configuration.sdm.credentialsResolver = new GitlabPrivateTokenCredentialsResolver();
+```
 
-Please see [docs.atomist.com][atomist-doc] for
-[developer][atomist-doc-sdm] documentation.
-
-[atomist-doc-sdm]: https://docs.atomist.com/developer/sdm/ (Atomist Documentation - SDM Developer)
-
-## Connect
-
-Follow [@atomist][atomist-twitter] and [The Composition][atomist-blog]
-blog related to SDM.
-
-[atomist-twitter]: https://twitter.com/atomist (Atomist on Twitter)
-[atomist-blog]: https://the-composition.com/ (The Composition - The Official Atomist Blog)
 
 ## Support
 
@@ -51,12 +39,11 @@ channel in the [Atomist community Slack workspace][slack].
 
 If you find a problem, please create an [issue][].
 
-[issue]: https://github.com/atomist-seeds/sdm-pack/issues
+[issue]: https://github.com/atomist/sdm-pack-gitlab/issues
 
 ## Development
 
-You will need to install [Node.js][node] to build and test this
-project.
+You will need to install [Node.js][node] to build and test this project.
 
 [node]: https://nodejs.org/ (Node.js)
 
@@ -81,6 +68,12 @@ Releases are handled via the [Atomist SDM][atomist-sdm].  Just press
 the 'Approve' button in the Atomist dashboard or Slack.
 
 [atomist-sdm]: https://github.com/atomist/atomist-sdm (Atomist Software Delivery Machine)
+
+## Roadmap
+
+- Add commands to create issues, tags, ...
+
+Community contributions welcome!
 
 ---
 
